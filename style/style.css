@@ -1,0 +1,267 @@
+html {
+    --menu: #60B8B5;
+    --botao-menu: #4b7c7a;
+    --fundo: #A9F5F2;
+    --cracha: #486E6C;
+    --texto: #fff;
+
+    color: var(--texto);
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: var(--fundo);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    border: none;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--menu);
+}
+
+main {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-right: 0;
+}
+
+#modal-form {
+    display: none;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #000;
+}
+
+.form-caixa {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 25rem;
+    margin: 8% auto;
+}
+
+main .modal-form h2 {
+    font-size: 22px;
+}
+
+.form {
+    text-align: center;
+}
+
+.form input {
+    width: 90%;
+    padding: 0.6rem;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    background: rgb(241, 241, 241);
+}
+
+.form input:focus {
+    outline: none;
+    border: none;
+    box-shadow: 0 0 0 1px var(--cracha);
+}
+
+.form input::placeholder {
+    color: rgb(184, 181, 181);
+}
+
+.form label {
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+}
+
+/* Botões */
+
+.secao-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+button.botoes {
+    padding: 0.8rem 2rem;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+button:hover {
+    filter: brightness(1.2);
+}
+
+button:active {
+    transform: translateY(8px);
+}
+
+header button {
+    background: var(--botao-menu);
+    color: var(--texto);
+    margin-left: 0.5rem;
+}
+.botoes#postar-contato, .botoes#postar {
+    background: #02e05e;
+
+}
+
+.botoes#cancelar-contato, .botoes#cancelar {
+    background: #e25252;
+}
+
+/* Botao de info */
+
+button#abrir-info {
+    position: fixed;
+    z-index: 1;
+    bottom: 15px;
+    right: 100px;
+    background: none;
+    border: none;
+}
+
+.img-modal {
+    width: 55px;
+    height: 55px;
+}
+
+/* Botao de contato */
+
+button#abrir-contato {
+    position: fixed;
+    z-index: 1;
+    bottom: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+}
+
+/* Info */
+
+#modal-info {
+    display: none;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #000;
+}
+
+#modal-info .cracha {
+    width: 14rem;
+    height: 26rem;
+    margin: 12% auto;
+}
+
+/* Contato */
+
+#modal-contato {
+    display: none;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #000;
+}
+
+/* Crachá */
+
+#card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    align-items: center;
+    justify-items: center;
+    gap: 2rem;
+    margin: 5%;
+}
+
+.cracha {
+    border: 5px solid var(--cracha);
+    padding: 2rem;
+    background: rgb(75, 124, 122);
+    background: linear-gradient(171deg, rgba(75, 124, 122, 1) 19%, rgba(80, 127, 125, 1) 28%, rgba(154, 173, 171, 1) 100%);
+    border-radius: 10px;
+}
+
+.buraco {
+    display: inline-block;
+    width: 90px;
+    height: 15px;
+    border: 3px solid var(--cracha);
+    border-radius: 10px;
+    background: var(--fundo);
+}
+
+.meu {
+    background: #659391 !important;
+}
+
+.cracha img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border: 6px solid var(--cracha);
+}
+
+/* Responsividade */
+
+@media (max-width: 770px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+    header button {
+        margin-top: 0.4rem;
+    }
+
+    .secao-botoes {
+        gap: 15px;
+    }
+
+    .form-caixa {
+        padding: 1rem;
+        width: 70vw;
+    }
+
+    #card {
+        margin: 0;
+    }
+}

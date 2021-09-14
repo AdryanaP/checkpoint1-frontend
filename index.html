@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Icon -->
+    <link rel="shortcut icon" href="https://image.flaticon.com/icons/png/512/86/86066.png" type="image/x-icon">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style/style.css">
+
+    <title>Gerador de Crachá</title>
+</head>
+
+<body>
+    <header>
+        <!-- Menu superior -->
+        <h1>Gerador de Crachá</h1>
+        <div>
+            <button type="button" class="botoes" id="adicionar">Adicionar novo crachá</button>
+            <button type="button" class="botoes" id="apagar">Apagar todos</button>
+        </div>
+    </header>
+    <main>
+        <div id="modal-form">
+            <div class="form-caixa">
+                <h2>Informações para o crachá</h2>
+
+                <!-- Formulário -->
+                <form method="post">
+
+                    <!-- Seção para adicionar o cracha-->
+                    <div class="form">
+                        <label for="empresa">Empresa:</label>
+                        <input type="text" name="empresa" id="empresa" placeholder="insira o nome da empresa">
+                    </div>
+
+                    <div class="form">
+                        <label for="nome">Nome:</label>
+                        <input type="text" name="nome" id="nome" placeholder="insira o nome completo">
+                    </div>
+
+                    <div class="form">
+                        <label for="cargo">Cargo:</label>
+                        <input type="text" name="cargo" id="cargo" placeholder="insira o cargo">
+                    </div>
+
+                    <div class="form">
+                        <label for="url">Cole a url de uma foto:</label>
+                        <input type="u" name="url" id="url" placeholder="insira uma URL">
+                    </div>
+
+                    <!-- Seção de Botões -->
+                    <div class="secao-botoes">
+                        <button type="button" class="botoes" id="postar">Gerar crachá</button>
+                        <button type="reset" class="botoes" id="cancelar">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Botões inferiores -->
+        <div id="card">
+        </div>
+        <button type="button" id="abrir-info">
+            <img src="https://image.flaticon.com/icons/png/512/1041/1041820.png" class="img-modal">
+        </button>
+        <button type="button" id="abrir-contato">
+            <img src="https://image.flaticon.com/icons/png/512/1250/1250973.png" class="img-modal">
+        </button>
+
+        <!-- Modal de contato -->
+        <div id="modal-contato">
+            <div class="form-caixa">
+                <h2>Entre em contato</h2>
+
+                <!-- Formulário para contato -->
+                <form method="post">
+                    <div class="form">
+                        <label for="nome">Nome:</label>
+                        <input type="text" name="nome" id="nome" placeholder="insira o seu nome">
+                    </div>
+
+                    <div class="form">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="insira o seu email">
+                    </div>
+
+                    <div class="form">
+                        <label for="mensagem">Mensagem:</label>
+                        <input type="text" name="mensagem" id="mensagem" placeholder="insira a sua mensagem">
+                    </div>
+
+                    <!-- Seção de Botões -->
+                    <div class="secao-botoes">
+                        <button type="reset" class="botoes" id="postar-contato">Enviar</button>
+                        <button type="reset" class="botoes" id="cancelar-contato">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal de informações -->
+        <div id="modal-info">
+            <div class="cracha">
+                <span class="buraco meu"></span>
+                <h2>Desenvolvido por:</h2>
+                <img src="./images/eu.jpeg">
+                <h3>Adryana Portugal</h3>
+                <p>Programadora</p>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Script -->
+    <script src="script/script.js"></script>
+</body>
+
+</html>
